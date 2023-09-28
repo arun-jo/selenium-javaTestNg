@@ -15,9 +15,16 @@ public class HomePage {
   public void f() {
 	  
 	  System.out.println("hello");
-	  
-	  for(int i = 0; i <=10; i++) {
-		System.out.println(i);  
+	  int i = 0;
+	 
+		  
+	  for( i = 0; i <=10; i++) {
+		  
+		  if(  i % 2 != 0) {
+			  System.out.println("*");
+	//	System.out.println(i);  
+	  }
+		  System.out.println(i); 
 	  }
   }
   @BeforeMethod
