@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+	<test name="Test1">
+		<classes>
+			<class name="com.simple.t1.pack.NewTest" />
+			<class name="com.simple.t1.pack.NewTest2" />
+		</classes>
+	</test>
+</suite>
