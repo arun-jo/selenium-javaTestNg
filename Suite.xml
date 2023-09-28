@@ -2,8 +2,8 @@
 <suite name="MyTestSuite">
 	<test name="Test1">
 		<classes>
-			<class name="com.simple.t1.pack.NewTest" />
-			<class name="com.simple.t1.pack.NewTest2" />
+			<class name="main.pack.test.one.BeforeLogin" />
+			<class name="main.pack.test.one.AfterLogin" />
 		</classes>
 	</test>
 </suite>
