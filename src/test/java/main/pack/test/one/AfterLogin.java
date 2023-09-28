@@ -3,7 +3,6 @@ package main.pack.test.one;
 import org.testng.annotations.Test;
 import main.pack.one.*;
 
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -15,30 +14,30 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
 public class AfterLogin {
-	
+
 	// private static WebDriver driver;
 
 	// (dependsOnMethods = "f2")
 
 	@Test
-	public  void f2() {
+	public void f2() {
 
 		System.out.println(Setup.driver.getTitle());
-		
-
 
 		Setup.driver
 				.findElement(
 						By.xpath("/html/body/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[3]/td/ul/li[2]/a"))
 				.click();
-
 	}
-	
+
 	@Test
 	public void f3() {
-		
-		 Setup.driver.findElement(By.xpath("/html/body/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[3]/td/ul/li[1]/a")).click();
-		 System.out.println("current url " + Setup.driver.getCurrentUrl());
+
+		Setup.driver
+				.findElement(
+						By.xpath("/html/body/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[3]/td/ul/li[1]/a"))
+				.click();
+		System.out.println("current url " + Setup.driver.getCurrentUrl());
 	}
 
 	@BeforeMethod
@@ -69,7 +68,6 @@ public class AfterLogin {
 	public void beforeTest() {
 
 		System.out.println("before test 2");
-
 	}
 
 	@AfterTest
@@ -81,7 +79,7 @@ public class AfterLogin {
 	@BeforeSuite
 	public static void beforeSuite() {
 
-		//System.out.println("isBrowserOpen value:" + Setup.isBrowserOpen);
+		// System.out.println("isBrowserOpen value:" + Setup.isBrowserOpen);
 
 		if (Setup.isBrowserOpen == false) {
 
@@ -89,13 +87,11 @@ public class AfterLogin {
 			System.out.println("browser opened " + "before suite 1");
 			Setup.getDriver();
 			Setup.driver.get("https://www.qualitypointtech.com/webtimesheet/demo/index.php?");
-
 		}
 
 		else {
 			System.out.println("isbrowservalue = true");
 		}
-		
 	}
 
 	@AfterSuite
@@ -106,5 +102,4 @@ public class AfterLogin {
 		Setup.quitDriver();
 
 	}
-
 }

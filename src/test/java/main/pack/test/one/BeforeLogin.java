@@ -3,8 +3,6 @@ package main.pack.test.one;
 import main.pack.one.*;
 import org.testng.annotations.Test;
 
-
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -16,8 +14,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
 public class BeforeLogin {
-	
-	// protected 
+
+	// protected
 
 	@Test
 	public static void f1() throws InterruptedException {
@@ -25,7 +23,6 @@ public class BeforeLogin {
 		System.out.println("test 1");
 
 		Setup.driver.findElement(By.name("username")).sendKeys("admin");
-
 		Setup.driver.findElement(By.name("password")).sendKeys("user1");
 		Setup.driver.findElement(By.name("login")).click();
 
@@ -58,8 +55,6 @@ public class BeforeLogin {
 	@BeforeTest
 	public void beforeTest() {
 
-	//	Setup.driver.get("https://www.qualitypointtech.com/webtimesheet/demo/index.php?");
-
 		System.out.println("before test 1");
 	}
 
@@ -73,14 +68,11 @@ public class BeforeLogin {
 	public static void beforeSuite() {
 
 		if (Setup.isBrowserOpen == false) {
-			
+
 			System.out.println("browser opened " + "before suite 1");
 			Setup.getDriver();
-			
 			Setup.driver.get("https://www.qualitypointtech.com/webtimesheet/demo/index.php?");
-
 		}
-		// return isBrowserOpen;
 
 	}
 
@@ -89,7 +81,6 @@ public class BeforeLogin {
 
 		System.out.println("after suite 1");
 		Setup.quitDriver();
-
 	}
 
 }
